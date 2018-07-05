@@ -3,15 +3,15 @@
 ---
 @import "jekyll-theme-prologue";
 
-#nav ul li #my-great-homepage a.active span::before{
+#nav ul li a:active #my-great-homepage  span::before{
     color:#fd151b;
 }
 
-#nav ul li #my-great-homepage a span::before{
+#nav ul li a #my-great-homepage  span::before{
     color:#fd5459;
 }
 
-#nav ul li #amazing-blog-link a.active span::before{
+#nav ul li a:active #amazing-blog-link  span::before{
     color:#ffb30f;
 }
 
@@ -19,14 +19,14 @@
     color:#ffce66;
 }
 
-#nav ul li #reading-list-link a.active span::before{
+#nav ul li a:active #reading-list-link  span::before{
     color:#01295f;
 }
 
-#nav ul li #reading-list-link a span::before{
+#nav ul li a #reading-list-link  span::before{
     color:#46638a;
 }
 
-justified {
+.justified {
     text-align: justify;
 }

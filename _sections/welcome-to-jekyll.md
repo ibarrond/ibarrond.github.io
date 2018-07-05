@@ -1,6 +1,6 @@
 ---
 title: Andica
-icon: fa-d-and-d 
+icon: fa-fire 
 order: 5
 ---
 
