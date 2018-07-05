@@ -3,6 +3,30 @@
 ---
 @import "jekyll-theme-prologue";
 
-#nav ul li a span::before{
+#nav ul li #my-great-homepage a.active span::before{
     color:#fd151b;
+}
+
+#nav ul li #my-great-homepage a span::before{
+    color:#fd5459;
+}
+
+#nav ul li #amazing-blog-link a.active span::before{
+    color:#ffb30f;
+}
+
+#nav ul li #amazing-blog-link a span::before{
+    color:#ffce66;
+}
+
+#nav ul li #reading-list-link a.active span::before{
+    color:#01295f;
+}
+
+#nav ul li #reading-list-link a span::before{
+    color:#46638a;
+}
+
+justified {
+    text-align: justify;
 }
