@@ -31,10 +31,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: '@ibarrond'
-subtitle: who I am and what I do
-description:  This is where I get to present myself
+subtitle: I and my circumstance
+description: My personal webpage & blog
 author: Alberto Ibarrondo
-email: ibarrondo.alberto@gmail.com
+email: ibarrond@eurecom.fr
 avatar: assets/images/avatar.jpg
 
 # You'll want to customize url and baseurl for your own site:
