@@ -3,29 +3,25 @@
 ---
 @import "jekyll-theme-prologue";
 
-#nav ul li a:active#my-great-homepage  span::before{
-    color:#fd151b;
-}
+#nav ul li a:active span::before{ color:#849324;}
 
-#nav ul li a#my-great-homepage  span::before{
-    color:#fd5459;
-}
+#nav ul li a:active#my-great-homepage span::before{ color:#fd151b;}
+#nav ul li a:active#my-great-homepage-link span::before{ color:#fd151b;}
 
-#nav ul li a:active#amazing-blog-link  span::before{
-    color:#ffb30f;
-}
+#nav ul li a#my-great-homepage  span::before{  color:#fd5459;}
+#nav ul li a#my-great-homepage-link  span::before{  color:#fd5459;}
 
-#nav ul li a#amazing-blog-link  span::before{
-    color:#ffce66;
-}
+#nav ul li a:active#amazing-blog  span::before{ color:#ffb30f;}
+#nav ul li a:active#amazing-blog-link  span::before{ color:#ffb30f;}
 
-#nav ul li a:active#reading-list-link  span::before{
-    color:#01295f;
-}
+#nav ul li a#amazing-blog  span::before{  color:#ffce66;}
+#nav ul li a#amazing-blog-link  span::before{  color:#ffce66;}
 
-#nav ul li a#reading-list-link  span::before{
-    color:#46638a;
-}
+#nav ul li a:active#reading-list  span::before{  color:#01295f;}
+#nav ul li a:active#reading-list-link  span::before{  color:#01295f;}
+
+#nav ul li a#reading-list  span::before{  color:#46638a;}
+#nav ul li a#reading-list-link  span::before{  color:#46638a;}
 
 .justified {
     text-align: justify;
