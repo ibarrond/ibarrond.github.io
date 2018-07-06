@@ -23,23 +23,26 @@ section .item header h3 { text-shadow: 0.3px 0.3px 0.5px;}
 
 #nav ul li a.active span::before{ color:#16a23f;}
 
-#nav ul li a#my-great-homepage span::before{ color:#fd151b;}
-#nav ul li a#my-great-homepage-link span::before{ color:#fd151b;}
+#nav ul li a#homepage span::before{ color:#b30f13;}
+#nav ul li a#homepage-link span::before{ color:#b30f13;}
 
-#nav ul li a.active#my-great-homepage  span::before{  color:#fd5459;}
-#nav ul li a.active#my-great-homepage-link  span::before{  color:#fd5459;}
+#nav ul li a.active#homepage  span{  color:#ff6363;}
+#nav ul li a.active#homepage  span::before{  color:#ff6363;}
+#nav ul li a.active#homepage-link  span::before{  color:#ff6363;}
 
-#nav ul li a#amazing-blog  span::before{ color:#ffb30f;}
-#nav ul li a#amazing-blog-link  span::before{ color:#ffb30f;}
+#nav ul li a#amazing-blog  span::before{ color:#b0811e;}
+#nav ul li a#amazing-blog-link  span::before{ color:#b0811e;}
 
+#nav ul li a.active#amazing-blog  span{  color:#ffce66;}
 #nav ul li a.active#amazing-blog  span::before{  color:#ffce66;}
 #nav ul li a.active#amazing-blog-link  span::before{  color:#ffce66;}
 
-#nav ul li a#reading-list  span::before{  color:#01295f;}
-#nav ul li a#reading-list-link  span::before{  color:#01295f;}
+#nav ul li a#reading-list  span::before{  color:#06387b;}
+#nav ul li a#reading-list-link  span::before{  color:#06387b;}
 
-#nav ul li a.active#reading-list  span::before{  color:#46638a;}
-#nav ul li a.active#reading-list-link  span::before{  color:#46638a;}
+#nav ul li a.active#reading-list span {  color:#72a9f2;}
+#nav ul li a.active#reading-list span::before{  color:#72a9f2;}
+#nav ul li a.active#reading-list-link  span::before{  color:#72a9f2;}
 
 #nav ul li a#andica  span::before{  color:#8c59b0;}
 #nav ul li a#andica-link  span::before{  color:#8c59b0;}
