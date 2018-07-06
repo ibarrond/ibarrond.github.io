@@ -22,12 +22,14 @@ section .item header h3 { text-shadow: 0.3px 0.3px 0.5px;}
 
 #nav ul li a.active span::before{ color:#16a23f;}
 
+#nav ul li a.scrolly{ padding: 0.2em 1.5em 0.2em 1.5em; }
+
 #nav ul li a#homepage span::before{ color:#b30f13;}
 #nav ul li a#homepage-link span::before{ color:#b30f13;}
 
 #nav ul li a.active#homepage  span{  color:#ff6363;}
-#nav ul li a.active#homepage  span::before{  color:#ff6363;}
-#nav ul li a.active#homepage-link  span::before{  color:#ff6363;}
+#nav ul li a.active#homepage  span::before{  color:#ef5353;}
+#nav ul li a.active#homepage-link  span::before{  color:#ef5353;}
 
 #nav ul li a#amazing-blog  span::before{ color:#b0811e;}
 #nav ul li a#amazing-blog-link  span::before{ color:#b0811e;}

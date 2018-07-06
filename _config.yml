@@ -35,7 +35,7 @@ subtitle: Be a voice, not an echo
 description: My personal webpage & blog
 author: Alberto Ibarrondo
 email: ibarrond@eurecom.fr
-avatar: assets/images/avatar.jpg
+avatar: assets/images/avatar.png
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: "" # the subpath of your site, e.g. /blog
