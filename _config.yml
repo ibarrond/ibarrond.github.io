@@ -5,7 +5,7 @@ paginate: 10 # it will paginate after this number
 language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /BeAVoice/
+baseurl: /
 
 # Website info
 title: Be A Voice, not an Echo
@@ -66,12 +66,12 @@ feed:
 safe: False
 lsi: False
 username: ibarrond
-repo: BeAVoice
+repo: ibarrond.github.io
 branch: gh-pages
 relative_source: ../BeAVoice/
 destination: ../blog/
-production_url:  https://ibarrond.github.io/BeAVoice/
-source_url:  https://github.com/ibarrond/BeAVoice/
+production_url:  https://ibarrond.github.io/
+source_url:  https://github.com/ibarrond/ibarrond.github.io/
 
 exclude:
   - assets/css
