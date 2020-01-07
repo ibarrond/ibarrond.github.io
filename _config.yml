@@ -1,59 +1,92 @@
-# Developer's Note: This is a sample _config.yml file offered with
-# jekyll-theme-prologue for your convenience. To use it, move it to your
-# project's root directory. Please note that the following lines are
-# NECESSARY for Prologue to work correctly:
-#
-# theme: jekyll-theme-prologue
-# collections: [sections]
-#
-# They activate the theme and tell Jekyll to find your homepage content
-# in /_sections. Note where "sections" starts with an underscore
-# and where it doesn't. The social settings will make links to
-# Twitter, etc., but only if you give the URL.
-#
-# Also, be sure to customize url and baseurl for your site.
-#
-# ---------------------------------------------------------------
-#
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+paginate: 10 # it will paginate after this number
+language: 'en-uk'
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: '@ibarrond'
-subtitle: Be a voice, not an echo
-description: My personal webpage & blog
-author: Alberto Ibarrondo
-email: ibarrond@eurecom.fr
-avatar: assets/images/avatar.png
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /BeAVoice/
 
-# You'll want to customize url and baseurl for your own site:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ibarrond.github.io/" # the base hostname & protocol for your site
+# Website info
+title: Be A Voice, not an Echo
+description: Sharing engineering knowhow
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+production_url:  https://ibarrond.github.io/BeAVoice/
+source_url:  https://github.com/ibarrond/BeAVoice/
+CNAME: #add cname for website to be created
 
-# Social settings
-facebook_url: 
-github_url: "https://github.com/ibarrond"
-googleplus_url:
-instagram_url:
-linkedin_url: "https://www.linkedin.com/in/albertoibarrondo/"
-pinterest_url:
-slack_url:
-twitter_url: "https://twitter.com/ibarrond_"
+# Social info
+navigation: True # show the navbar links
+twitter: _ibarrond # replace by your username
+linkedin: albertoibarrondo # replace by your username
 
-# Google Analytics Tracking ID goes here:
-google_analytics:
+# Disqus
+disqus: True
+disqus_shortname: ibarrond-github-io # replace with your disqus username
 
-# The following settings are NECESSARY for the Prologue theme to run:
-remote_theme: chrisbobbe/jekyll-theme-prologue
-collections: [sections]
+# Google Analytics
+# google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: False
+lsi: False
+username: ibarrond
+repo: BeAVoice
+branch: gh-pages
+relative_source: ../BeAVoice/
+destination: ../blog/
+production_url:  https://ibarrond.github.io/BeAVoice/
+source_url:  https://github.com/ibarrond/BeAVoice/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*

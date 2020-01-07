@@ -1,0 +1,16 @@
+deep-learning:
+  name: Deep Learning
+  description: Lots of Data and lots of AI.
+  cover: assets/images/tag_deep_learning.jpg
+data-science:
+  name: Data Science
+  description: Making sense of data.
+  cover: assets/images/tag_data_science.jpg
+cryptography:
+  name: Cryptography
+  description: Protecting your algorithms and data while still using them.
+  cover: assets/images/tag_cryptography.jpg
+dev:
+  name: dev
+  description: Not fancy research, but essential nonetheless. 
+  cover: assets/images/tag_dev.jpg

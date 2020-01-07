@@ -1,0 +1,21 @@
+ibarrond:
+  username: ibarrond
+  name: ibarrond
+  location: Sophia Antipolis, FRANCE
+  url_full: https://ibarrond.github.io/
+  url: ibarrond.github.io
+  bio: Deep Learning expert, Cryptography enthusiast, Telecommunications engineer
+  picture: assets/images/avatar.png
+  linkedin: albertoibarrondo
+  twitter: _ibarrond
+  cover: False
+ghost:
+  username: ghost
+  name: Ghost
+  url_full: http://jekyller.github.io/jasper2/
+  url: jekyller.github.io/jasper2
+  bio: The professional publishing platform
+  picture: assets/images/ghost.png
+  facebook: ghost
+  twitter: tryghost
+  cover: False
