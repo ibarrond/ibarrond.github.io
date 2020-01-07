@@ -14,8 +14,8 @@ cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url:  https://ibarrond.github.io/BeAVoice/
-source_url:  https://github.com/ibarrond/BeAVoice/
+production_url:  https://ibarrond.github.io/
+source_url:  https://github.com/ibarrond/ibarrond.github.io/
 CNAME: #add cname for website to be created
 
 # Social info
@@ -68,7 +68,7 @@ lsi: False
 username: ibarrond
 repo: ibarrond.github.io
 branch: gh-pages
-relative_source: ../BeAVoice/
+relative_source: ../ibarrond.github.io/
 destination: ../blog/
 production_url:  https://ibarrond.github.io/
 source_url:  https://github.com/ibarrond/ibarrond.github.io/
