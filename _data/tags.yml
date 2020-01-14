@@ -14,3 +14,7 @@ dev:
   name: dev
   description: Not fancy research, but essential nonetheless. 
   cover: assets/images/tag_dev.jpg
+getting-started:
+  name: getting-started
+  description: False
+  cover: False

@@ -1,4 +1,4 @@
-sudo: false
+os: linux
 language: ruby
 cache:
   bundler: true
@@ -6,7 +6,7 @@ cache:
   - node_modules # NPM packages
   - /home/travis/.rvm/ # Ruby
 rvm:
-- 2.5.1
+    - 2.5.1
 
 install:
   # Install Jekyll and dependencies
@@ -17,7 +17,7 @@ script: bundle exec rake site:deploy --quiet #--trace
 # Generate your secure token with the travis gem:
 # get Github token from your Travis CI profile page
 # gem install travis
-# GH_TOKEN from https://github.com/settings/tokens 
+# GH_TOKEN from https://github.com/settings/tokens
 # travis encrypt 'GIT_NAME="ibarrond" GIT_EMAIL="ibarrondo.alberto@gmail.com" GH_TOKEN=....'
 env:
   global:

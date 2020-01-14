@@ -1,17 +1,18 @@
 # Jekyll configuration
 markdown: kramdown
 highlighter: rouge
-paginate: 10 # it will paginate after this number
+paginate: 15 # it will paginate after this number
 language: 'en-uk'
+words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
 
 # Website info
-title: Be A Voice, not an Echo
-description: Sharing engineering knowhow
+title: "Be A Voice, not an Echo"
+description: "Sharing engineering knowhow"
 cover: assets/images/blog-cover.jpg
-logo: assets/images/blog-icon.png
+logo: assets/images/blog-title.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 production_url:  https://ibarrond.github.io/
@@ -20,6 +21,9 @@ CNAME: #add cname for website to be created
 
 # Social info
 navigation: True # show the navbar links
+subscribers: False # you need to connect an external service for this to work,
+# if 'True' the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
 twitter: ibarrond_ # replace by your username
 linkedin: albertoibarrondo # replace by your username
 
@@ -67,9 +71,9 @@ safe: False
 lsi: False
 username: ibarrond
 repo: ibarrond.github.io
-branch: gh-pages
-relative_source: ../ibarrond.github.io/
-destination: ../blog/
+branch: master
+relative_source: ../
+destination: ../ibarrond-pages/
 production_url:  https://ibarrond.github.io/
 source_url:  https://github.com/ibarrond/ibarrond.github.io/
 
