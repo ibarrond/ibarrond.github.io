@@ -7,6 +7,7 @@ words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
+url:  https://ibarrond.github.io
 
 # Website info
 title: "Be A Voice, not an Echo"
@@ -72,7 +73,7 @@ lsi: False
 username: ibarrond
 repo: ibarrond.github.io
 branch: gh-pages
-relative_source: ../ibarrond.github.io/
+relative_source: ../ibarrond.github.ia/
 destination: ../ibarrond-pages/
 
 exclude:
