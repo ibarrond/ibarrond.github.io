@@ -20,7 +20,7 @@ CNAME: #add cname for website to be created
 
 # Social info
 navigation: True # show the navbar links
-twitter: _ibarrond # replace by your username
+twitter: ibarrond_ # replace by your username
 linkedin: albertoibarrondo # replace by your username
 
 # Disqus
@@ -32,8 +32,8 @@ disqus_shortname: ibarrond-github-io # replace with your disqus username
 
 # Permalinks
 permalink: /:title
-# permalink: /author/:author
-# permalink: /tag/:tag
+permalink: /author/:author
+permalink: /tag/:tag
 
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`
