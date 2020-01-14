@@ -6,7 +6,7 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
+baseurl: //
 
 # Website info
 title: "Be A Voice, not an Echo"
@@ -71,7 +71,7 @@ safe: False
 lsi: False
 username: ibarrond
 repo: ibarrond.github.io
-branch: master
+branch: gh-pages
 relative_source: ..//
 destination: ../ibarrond-pages/
 
