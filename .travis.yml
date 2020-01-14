@@ -4,6 +4,7 @@ cache:
   bundler: true
   directories:
   - node_modules # NPM packages
+  - /home/travis/.rvm/ # Ruby
 rvm:
 - 2.5.1
 
