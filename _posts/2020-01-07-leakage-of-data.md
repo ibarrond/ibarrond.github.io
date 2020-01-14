@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  post_correlation.jpg
+cover:  assets/images/post_correlation.jpg
 navigation: True
 title: Data Leakage in Machine Learning
 date: 2020-01-07 10:00:00

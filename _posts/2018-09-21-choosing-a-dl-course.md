@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  post_choosing_mooc.jpg
+cover:  assets/images/post_choosing_mooc.jpg
 navigation: True
 title: Choosing a MOOC on Deep Learning
 date: 2018-09-21 10:00:00

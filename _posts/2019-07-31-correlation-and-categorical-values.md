@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  post_correlation.jpg
+cover:  assets/images/post_correlation.jpg
 navigation: True
 title: Correlation and Categorical VS Numerical values
 date: 2018-09-21 10:00:00
