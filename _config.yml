@@ -72,7 +72,7 @@ lsi: False
 username: ibarrond
 repo: ibarrond.github.io
 branch: gh-pages
-relative_source: ..//
+relative_source: ../
 destination: ../ibarrond-pages/
 
 exclude:
