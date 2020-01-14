@@ -6,8 +6,8 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
-url:  https://ibarrond.github.io
+baseurl: '/'
+url:  https://ibarrond.github.io/
 
 # Website info
 title: "Be A Voice, not an Echo"
@@ -16,7 +16,7 @@ cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-title.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url:  https://ibarrond.github.io
+production_url:  https://ibarrond.github.io/
 source_url:  https://github.com/ibarrond/ibarrond.github.io/
 CNAME: #add cname for website to be created
 
