@@ -70,7 +70,7 @@ safe: False
 lsi: False
 username: ibarrond
 repo: ibarrond.github.io
-branch: gh-pages
+branch: master
 relative_source: ../blog/
 destination: ../blog-pages/
 url:  https://ibarrond.github.io/
