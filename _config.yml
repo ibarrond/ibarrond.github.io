@@ -73,8 +73,8 @@ repo: ibarrond.github.io
 branch: gh-pages
 relative_source: ../blog/
 destination: ../blog-pages/
-url:  https://ibarrond.github.io
-production_url:  https://ibarrond.github.io
+url:  https://ibarrond.github.io/
+production_url:  https://ibarrond.github.io/
 source_url:  https://github.com/ibarrond/ibarrond.github.io/
 
 exclude:
