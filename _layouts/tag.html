@@ -2,7 +2,6 @@
 layout: default
 current: tag
 title: Tag Page
-cover: false
 class: 'tag-template'
 navigation: True
 logo: 'assets/images/ghost.png'
@@ -14,14 +13,14 @@ logo: 'assets/images/ghost.png'
 <!-- The big featured header, it uses blog cover image as a BG if available -->
 <!-- #tag -->
 {% include dynamic_tag_info.html %}
-<header class="site-header outer {% if page.tag.cover or page.cover %}" style="background-image: url({{ site.baseurl }}{% if page.tag.cover %}{{ page.tag.cover }}{% else %}{{ page.cover }}{% endif%}) {% else %}no-cover{% endif %}">
+<header class="site-header outer {% if cover or page.cover %}" style="background-image: url({{ site.baseurl }}{% if cover %}{{ cover }}{% else %}{{ page.cover }}{% endif%}) {% else %}no-cover{% endif %}">
     <div class="inner">
         {% include site-nav.html %}
         <div class="site-header-content">
             <h1 class="site-title">{{ page.tag | capitalizeall }}</h1>
             <h2 class="site-description">
-                {% if page.tag.tag_description %}
-                    {{ tag_description }}
+                {% if page.tag.description %}
+                    {{ page.tag.description }}
                 {% elsif page.tag %}
     			    A collection of {{ paginator.total_posts }} posts
                 {% endif %}
