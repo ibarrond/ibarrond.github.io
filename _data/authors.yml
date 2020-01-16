@@ -1,23 +1,13 @@
-hannah:
-  username: hannah
-  name: Hannah Wolfe
-  location: London, UK
-  url_full: http://hannah.wf/
-  url: hannah.wf
-  bio: Hannah is the co-founder and lead developer at Ghost. She spends her days looking after Ghost's developer community, tracking down bugs & ensuring Ghost(Pro) is a happy place.
-  picture: assets/images/hannah.jpg
-  facebook: False
-  twitter: erisds
-  cover: assets/images/hannah-cover.jpg
 ibarrond:
   username: ibarrond
   name: Alberto Ibarrondo
   location: Sophia Antipolis, FR
   url_full: https://ibarrond.github.io/
   url: ibarrond.github.io
-  bio: PhD fellow, Researcher on deep learning & secure computing at IDEMIA & EURECOM.
+  bio: "PhD fellow, Researcher on deep learning & secure computing at IDEMIA & EURECOM."
   picture: assets/images/al_logo-white-bg.png
   linkedin: albertoibarrondo
+  mail: ibarrond@eurecom.fr.com
   facebook: False
   twitter: ibarrond_
   cover: assets/images/cover_alberto.jpg
