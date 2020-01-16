@@ -5,7 +5,7 @@ cover:  assets/images/post-data-leakage.jpg
 navigation: True
 title: Data Leakage in Machine Learning
 date: 2020-01-07 10:00:00
-tags: [Data Science]
+tags: [Data Science], [Deep Learning]
 class: post-template
 subclass: 'post tag-data-science'
 author: ibarrond

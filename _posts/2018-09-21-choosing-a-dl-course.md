@@ -5,7 +5,7 @@ cover:  assets/images/post_choosing_mooc.jpg
 navigation: True
 title: Choosing a MOOC on Deep Learning
 date: 2018-09-21 10:00:00
-tags: deep-learning
+tags: [Deep Learning]
 class: post-template
 subclass: 'post tag-deep-learning'
 author: ibarrond
