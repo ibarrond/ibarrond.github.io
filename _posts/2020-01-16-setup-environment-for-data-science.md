@@ -4,7 +4,7 @@ current: post
 cover:  assets/images/post-setup-env.jpg
 navigation: True
 title: Setting up an environment for Data Science
-date: 2018-09-21 10:00:00
+date: 2020-01-16 10:00:00
 tags: [dev]
 class: post-template
 subclass: 'post tag-dev'
