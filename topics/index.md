@@ -3,7 +3,7 @@ layout: page
 current: topics
 title: Topics
 navigation: true
-cover: 'assets/images/tags.png'
+logo: 'assets/images/favicon.png'
 class: page-template
 subclass: 'post page'
 ---
