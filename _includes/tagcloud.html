@@ -7,7 +7,7 @@
 {% endfor %}
 
 {% for tag in tags %}
-{% assign rel_tag_size = site.tags[tag].size | times: 3.0 | divided_by: tag_count | plus: 1 %}
+{% assign rel_tag_size = site.tags[tag].size | times: 2.5 | divided_by: tag_count | plus: 1 %}
 <span style="font-size: {{ rel_tag_size }}em;">
   <a href="{{ site.url }}/tag/{{ tag | replace: " ", "-" | downcase }}" class="site-tags">{{ tag | slugize }}
   <span>({{ site.tags[tag].size }})</span>

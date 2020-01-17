@@ -735,7 +735,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-content a {
     color: #000;
-    box-shadow: var(--blue) 0 -1px 0 inset;
+    box-shadow: inset 0 -1px 0 #7c0ea8;
 }
 
 .post-full-content a:hover {
