@@ -25,6 +25,8 @@ subscribers: False # you need to connect an external service for this to work,
 # by editing `_includes/subscribe-form.html`
 twitter: ibarrond_ # replace by your username
 linkedin: albertoibarrondo # replace by your username
+mail: ibarrond@eurecom.fr
+github: ibarrond
 
 # Disqus
 disqus: True

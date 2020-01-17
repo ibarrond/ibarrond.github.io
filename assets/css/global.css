@@ -145,7 +145,7 @@ a {
 }
 a:active,
 a:hover {
-    outline: 0;
+    outline: none;
 }
 b,
 strong {
