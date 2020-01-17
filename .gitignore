@@ -13,6 +13,7 @@
 *.swp
 
 # site build
+package-lock.json
 *.gem
 *.rbc
 .bundle

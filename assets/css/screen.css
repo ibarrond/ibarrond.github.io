@@ -336,7 +336,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .site-tags:hover {
-  background: #f1f1f1;
+  background:  #deacf1;
 }
 
 /* End Site Tag Styles */
@@ -739,7 +739,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-content a:hover {
-    color:  #deacf1;
+    color:  #7c0ea8;
     text-decoration: none;
 }
 
