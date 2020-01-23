@@ -14,9 +14,9 @@
                     <span class="post-card-tags-date">/</span>
                         {% for tag in page.previous.tags %}
                             {% if forloop.index == page.previous.tags.size %}
-                                <span class="post-card-tags">{{ tag | capitalize }}</span>
+                                <span class="post-card-tags-date">{{ tag | capitalize }}</span>
                             {% else %}
-                                <span class="post-card-tags">{{ tag | capitalize }}, </span>
+                                <span class="post-card-tags-date">{{ tag | capitalize }}, </span>
                             {% endif %}
                         {% endfor %}
                     {% endif %}

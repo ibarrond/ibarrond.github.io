@@ -655,7 +655,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-header {
     margin: 0 auto;
-    padding: 4vw 3vw 3vw;
+    padding: 6vw 3vw 3vw;
     max-width: 1040px;
     text-align: center;
 }
@@ -819,6 +819,26 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content a:hover {
     color:  #7c0ea8;
     text-decoration: none;
+}
+
+.post-full-content .anchor {
+	display: block;
+    position: relative;
+    top: -70px;
+}
+
+.post-full-content strong,
+.post-full-content em {
+    color: color(var(--darkgrey) l(-5%));
+}
+
+.post-full-content small {
+    display: inline-block;
+    line-height: 1.6em;
+}
+
+.post-full-content li:first-child {
+    margin-top: 0;
 }
 
 .post-full-content strong,
@@ -1681,6 +1701,10 @@ Usage (In Ghost editor):
 
 /* 8. Author Template
 /* ---------------------------------------------------------- */
+
+.author-template .site-header-content{
+	padding-top: 8vw;
+}
 
 .site-header-content .author-profile-image {
     z-index: 10;
