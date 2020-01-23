@@ -11,6 +11,7 @@
 
 # others
 *.swp
+_algolia_api_key
 
 # site build
 package-lock.json

@@ -40,6 +40,11 @@ permalink: /:title
 # permalink: /author/:author
 # permalink: /tag/:tag
 
+algolia:
+  application_id: URIHIBX1QW
+  index_name:     ibarrond.github.io
+  search_only_api_key: 97513f1d98c0d721051de13d1e45ba00
+
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`
 
