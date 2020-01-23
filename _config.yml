@@ -43,11 +43,14 @@ algolia:
   application_id: URIHIBX1QW
   index_name:     ibarrond.github.io
   search_only_api_key: 97513f1d98c0d721051de13d1e45ba00
-  files_to_exclude: [
-    index.html,
-    about/index.md
-    topics/index.md
-  ]
+  files_to_exclude: 
+    - index.html
+    - tag/**
+    - about/**
+    - author/**
+    - assets/**
+    - topics/**
+
   settings:
     attributesToSnippet: ['*:33']
     highlightPreTag: '<em class="ais-match-highlight">'
