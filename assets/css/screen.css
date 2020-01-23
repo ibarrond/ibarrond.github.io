@@ -91,7 +91,8 @@ body {
 @media (min-width: 900px) {
     .home-template .post-feed,
     .tag-template .post-feed,
-    .author-template .post-feed {
+    .author-template .post-feed,
+    .author-template .post-full {
         margin-top: -70px;
         padding-top: 0;
     }
@@ -513,7 +514,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     text-decoration: none;
 }
 
-.post-card-tags {
+.post-card-tags,
+.post-card-tags-date {
     display: contents;
     margin-bottom: 4px;
     color: var(--midgrey);
@@ -639,7 +641,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 /* ---------------------------------------------------------- */
 
 .post-template .site-main,
-.page-template .site-main {
+.page-template .site-main,
+.author-template .site-main{
     padding-bottom: 4vw;
     background: #fff;
 }
