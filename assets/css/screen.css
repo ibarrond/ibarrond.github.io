@@ -322,8 +322,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 	padding: 15px;
 	color: #ffffff;
 	cursor: auto;
-	border: 1px solid #ffffff;
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.3);
 }
+
+.ais-search-box--reset{
+    margin: 4px 8px 0 0;
+}
+
 .ais-search-box input:-moz-placeholder {
 	color: transparent;
 }
