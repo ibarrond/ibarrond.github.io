@@ -12,25 +12,14 @@
         {% endif %}
     </div>
     <div class="site-nav-right">
-      {% if page.current == 'home' %}
-		<div id="search-searchbar"></div>
-		<div class="search-icon">
-		  {% include search-icon.html %}
-		</div>
-	  {% endif %}
+        {% if page.current == 'home' %}
+            <div id="search-searchbar"></div>
+            <div id="search-icon">
+            {% include search-icon.html %}
+            </div>
+        {% endif %}
         <div class="social-links">
-            {% if site.linkedin %}
-                <a class="social-link social-link-fb" href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener">{% include linkedin.html %}</a>
-            {% endif %}
-            {% if site.twitter %}
-                <a class="social-link social-link-tw" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">{% include twitter.html %}</a>
-            {% endif %}
-            {% if site.github %}
-                <a class="social-link social-link-gh" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">{% include github.html %}</a>
-            {% endif %}
-            {% if site.mail %}
-                <a class="social-link social-link-mail" href="mailto:{{ site.mail }}" rel="noopener">{% include mail.html %}</a>
-            {% endif %}
+            <!-- Tags moved to Footer -->
         </div>
         {% if site.subscribers %}
             <a class="subscribe-button" href="https://feedly.com/i/subscription/feed/{{ site.url }}{{ site.baseurl }}feed.xml" target="_blank" rel="noopener">Subscribe</a>

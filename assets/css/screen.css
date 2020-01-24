@@ -281,6 +281,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 /*Search*/
+.ais-search-box--powered-by,
+.ais-search-box--magnifier-wrapper{
+    display: none;
+}
+
+
+
 .ais-match-highlight{
 	font-weight: bold;
 	text-decoration-line: underline;
@@ -324,7 +331,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 	color: transparent;
 }
 
-.search-icon{
+#search-icon{
 	display: flex;
 	padding-right: 10px;
 	padding-top: 4px;
@@ -333,7 +340,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 	z-index: 2;
 }
 
-.search-icon:hover{
+#search-icon:hover{
 	opacity:1;
 }
 
