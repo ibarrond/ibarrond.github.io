@@ -65,7 +65,7 @@ namespace :site do
     sh "bundle exec jekyll build"
 
     # Update Algolia index
-    sh "bundle exec jekyll algolia"
+    sh "bundle exec jekyll algolia --verbose"
     
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
