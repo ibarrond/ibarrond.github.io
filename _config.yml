@@ -46,17 +46,9 @@ algolia:
   extensions_to_index:
     - html
     - md
-  files_to_exclude: 
-    - index.html
-    - tag/**
-    - _data/**
-    - _includes/**
-    - _layouts/**
-    - _plugins/**
-    - about/**
-    - author/**
-    - assets/**
-    - topics/**
+  files_to_exclude:
+    - '**/index.html'
+    - '**/index.md'
 
   settings:
     attributesToSnippet: ['*:33']
@@ -103,6 +95,7 @@ production_url:  https://ibarrond.github.io/
 source_url:  https://github.com/ibarrond/ibarrond.github.io/
 
 exclude:
+  - tag/**
   - assets/css
   - node_modules
   - vendor
