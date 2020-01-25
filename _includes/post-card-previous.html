@@ -9,7 +9,7 @@
         <div class="post-card-content">
             <a class="post-card-content-link" href="{{ site.baseurl }}{{ page.previous.url | remove_first: '/' }}">
                 <header class="post-card-header">
-                    <time class="post-card-tags-date" datetime="{{ page.previous.date | date:'%e %B %Y' }}">{{ page.previous.date | date:'%e %B %Y' }}</time>
+                    <time class="post-card-tags-date" datetime="{{ page.previous.date | date:'%Y-%m-%d' }}">{{ page.previous.date | date:'%Y-%m-%d' }}</time>
                     {% if page.previous.tags.size > 0 %}
                     <span class="post-card-tags-date">/</span>
                         {% for tag in page.previous.tags %}

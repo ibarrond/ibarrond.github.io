@@ -46,7 +46,7 @@ search.addWidget(
 	  if (hit.date) {
 		  date = moment.unix(hit.date).format('D MMMM YYYY');
 		  template += `
-				<time class="post-card-tags-date" datetime="{{ page.date | date:'%e %B %Y' }}">${date}</time>`;
+				<time class="post-card-tags-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">${date}</time>`;
 	  }
 
 	  if('tags' in hit && hit.tags.length){
