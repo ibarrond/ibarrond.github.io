@@ -113,7 +113,15 @@ search.addWidget(
 	  }
 	  $('.ais-search-box--input').toggleClass('open');	  
   };
+  function hideSearchResults(){
+	  if($('.ais-search-box--input').hasClass('open')){
+		  $('#search-hits').hide();
+		  $('#posts').show();
+	 	  $('.ais-search-box--input').toggleClass('open');	
+	  }  
+  };
   </script>
   <script>
   $('#search-icon').on('click', expand);
+  $('.ais-search-box--reset').on('click', hideSearchResults);
   </script>

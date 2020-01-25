@@ -558,6 +558,16 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 0 25px 25px;
 }
 
+.post-card-header-excerpt-link a{
+    color:#570a75
+}
+
+.post-card-header-excerpt-link a:hover{
+    color: #7c0ea8;
+    text-decoration: none;
+    text-shadow: 0.85px 0.85px #ae81ff5c;
+}
+
 .author-profile-image {
     margin-right: 5px;
     width: 25px;
@@ -826,7 +836,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-content a {
     color: #000;
-    box-shadow: inset 0 -1px 0 #7c0ea8;
+    box-shadow: inset 0 -1px 0 #570a75;
 }
 
 .post-full-content a:hover {
