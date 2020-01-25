@@ -107,7 +107,6 @@ exclude:
   - LICENSE
   - package.json
   - Rakefile
-  - README.md
   - script.py
   - changelog.md
   - "*.Rmd"

@@ -64,7 +64,7 @@ search.addWidget(
 
 	  template += `
 		</header>
-        <a class="post-card-header-excerpt-link" href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">
+        <a class="post-card-header-excerpt-link" href="{{ site.baseurl }}${hit.url.substring(1)}">
 		  <header class="post-card-header">
 					<h2 class="post-card-title">${ title }</h2>
 				</header>
@@ -120,8 +120,4 @@ search.addWidget(
 	 	  $('.ais-search-box--input').toggleClass('open');	
 	  }  
   };
-  </script>
-  <script>
-  $('#search-icon').on('click', expand);
-  $('.ais-search-box--reset').on('click', hideSearchResults);
   </script>

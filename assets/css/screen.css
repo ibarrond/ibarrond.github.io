@@ -281,6 +281,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 /*Search*/
+.ais-hits {
+    width: 100%;
+}
+
 .ais-search-box--powered-by,
 .ais-search-box--magnifier-wrapper{
     display: none;
@@ -558,11 +562,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 0 25px 25px;
 }
 
-.post-card-header-excerpt-link a{
+a.post-card-header-excerpt-link{
     color:#570a75
 }
 
-.post-card-header-excerpt-link a:hover{
+a.post-card-header-excerpt-link:hover{
     color: #7c0ea8;
     text-decoration: none;
     text-shadow: 0.85px 0.85px #ae81ff5c;
