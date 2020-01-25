@@ -326,7 +326,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background: rgba(255, 255, 255, 0.3);
 }
 
-.ais-search-box--reset{
+.ais-search-box--reset-wrapper > button{
     margin: 4px 8px 0 0;
 }
 
