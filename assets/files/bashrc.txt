@@ -4,6 +4,12 @@
 # - https://www.freecodecamp.org/news/how-to-do-twice-as-much-with-half-the-keystrokes-using-bashrc/
 # - https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
 
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 # test for interactive shell, extracting from $-, the shell options
 iatest=$(expr index "$-" i)
 
