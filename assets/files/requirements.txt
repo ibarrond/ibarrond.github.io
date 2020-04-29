@@ -1,0 +1,38 @@
+# Generic Math
+numba
+numpy
+scipy
+cython
+
+# Notebooks
+jupyter
+jupytext
+jupyter_contrib_nbextensions # Requires extra configuration
+
+# Data Science
+dask
+pandas
+statsmodels
+xgboost
+
+# Data visualization
+holoviews
+datashader
+matplotlib
+matplotlib_venn
+seaborn
+bokeh
+
+# Web App and REST
+requests
+flask
+
+# Machine & Deep Learning
+tensorflow
+tensorflow_hub
+tensorflow_datasets 
+scikit-learn
+
+# Time Series (Only in Linux)
+# pystan 
+# fbprophet
