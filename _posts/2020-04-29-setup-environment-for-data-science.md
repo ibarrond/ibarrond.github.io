@@ -105,7 +105,6 @@ jupyter nbextension enable zenmode/main
 # 2. Bash
 Flavouring my preferred terminal, Bash, is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/assets/files/.bashrc) and run it:
 ```bash
-cd ~
-curl -s https://ibarrond.github.io/assets/files/.bashrc
-source .bashrc
+curl -s https://ibarrond.github.io/assets/files/bashrc.txt > ~/.bashrc
+source ~/.bashrc
 ```
