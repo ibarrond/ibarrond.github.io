@@ -1,38 +1,39 @@
 # Generic Math
-numba
-numpy
-scipy
-cython
+numba    # Efficient NumPy JIT compiler
+numpy    # Basic - Array computing
+scipy    # More maths/engineering/scientific computing
+cython   # Bridge C & C++ with Python
 
 # Notebooks
-jupyter
-jupytext
-jupyter_contrib_nbextensions # Requires extra configuration
+jupyter  # Basic - Interactive notebooks
+jupytext # Git meets Jupyter notebooks 
+jupyter_contrib_nbextensions # Extensions for notebooks. Need config!
 
 # Data Science
-dask
-pandas
-statsmodels
-xgboost
+pandas   # Basic - Data processing, tables and dataframes
+dask     # Scaling Numpy, Pandas, Scikit-Learn and XGBoost
+statsmodels # Statistical models
+xgboost  # State of the art decission trees
 
 # Data visualization
-holoviews
-datashader
-matplotlib
-matplotlib_venn
-seaborn
-bokeh
+matplotlib # Basic - plot data
+holoviews  # Interactive data visualization
+datashader # Render huge datasets
+matplotlib_venn # Plotting Venn diagrams
+seaborn    # Improving Matplotlib
+bokeh      # Interactive data visualization
 
 # Web App and REST
-requests
-flask
+requests   # Basic - interact with any REST API
+flask      # Web dev, lightweight compared to django
 
 # Machine & Deep Learning
-tensorflow
-tensorflow_hub
-tensorflow_datasets 
-scikit-learn
+tensorflow           # Basic - Deep Learning from google
+tensorflow_hub       # Collection of tf models
+tensorflow_datasets  # Collection of tf datasets
+scikit-learn         # Basic - Machine Learning
 
 # Time Series (Only in Linux)
-# pystan 
-# fbprophet
+#   -> Requires a C++ compiler: sudo apt-get install build-essential
+pystan;    platform_system!='Windows'
+fbprophet; platform_system!='Windows'
