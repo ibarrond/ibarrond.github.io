@@ -1,4 +1,4 @@
-## This .bashrc file is a mix of several sources, aggregated by @ibarrond:
+## This .bashrc file is a mix of several sources, aggregated by Alberto Ibarrondo @ibarrond:
 # - https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
 # - https://unix.stackexchange.com/questions/148/colorizing-your-terminal-and-shell-environment
 # - https://www.freecodecamp.org/news/how-to-do-twice-as-much-with-half-the-keystrokes-using-bashrc/
@@ -12,6 +12,12 @@ esac
 
 # test for interactive shell, extracting from $-, the shell options
 iatest=$(expr index "$-" i)
+
+#######################################################
+# VITAL COMMODITIES
+#######################################################
+# Swap capslock and esc
+setxkbmap -option caps:swapescape
 
 
 #######################################################
@@ -38,7 +44,7 @@ if [[ $iatest > 0 ]]; then bind "set bell-style visible"; fi
 
 # Expand the history size
 export HISTFILESIZE=10000
-export HISTSIZE=500
+export HISTSIZE=2000
 
 # Don't put duplicate lines in the history and do not add lines that start with a space
 export HISTCONTROL=erasedups:ignoredups:ignorespace
@@ -71,9 +77,8 @@ alias snano='sedit'
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
 export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'
-#export GREP_OPTIONS='--color=auto' #deprecated
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto" 
 
 # Color for manpages in less makes manpages a little easier to read
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -83,6 +88,9 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
+# Add local bin (contains jupyter) to PATH
+export PATH=$PATH:~/.local/bin
 
 #######################################################
 # ALIASES
@@ -95,7 +103,7 @@ alias cp='cp -rv'
 # Explain (v) what was done when moving a file
 alias mv='mv -v'
 # Add colors and file type extensions, ls = ll
-alias ls='ls -AFhC --color=always' 
+alias ls='ls -AFhC --group-directories-first --color=auto' 
 # Create any non-existent (p)arent directories and explain (v) what was done
 alias mkdir='mkdir -pv'
 # Always try to (c)ontinue getting a partially-downloaded file
@@ -103,8 +111,8 @@ alias wget='wget -c'
 
 # PYTHON
 # Virtualenv
-alias mkenv='python3 -m venv env'
-alias startenv='source env/bin/activate && which python3'
+alias mkenv='python3 -m venv venv'
+alias startenv='source venv/bin/activate && which python3'
 alias stopenv='deactivate'
 
 # GIT
@@ -130,7 +138,6 @@ alias t="time"
 alias o=xdg-open
 alias home='cd ~'
 alias root='cd /'
-alias -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -252,9 +259,9 @@ ftext ()
 cpg ()
 {
 	if [ -d "$2" ];then
-		cp -r $1 $2 && cd $2
+		cp -r "$1" "$2" && cd "$2"
 	else
-		cp -r $1 $2
+		cp -r "$1" "$2"
 	fi
 }
 
@@ -262,17 +269,17 @@ cpg ()
 mvg ()
 {
 	if [ -d "$2" ];then
-		mv $1 $2 && cd $2
+		mv "$1" "$2" && cd "$2"
 	else
-		mv $1 $2
+		mv "$1" "$2"
 	fi
 }
 
 # Create and go to the directory
 mkdirg ()
 {
-	mkdir -p $1
-	cd $1
+	mkdir -p "$1"
+	cd "$1"
 }
 
 # Goes up a specified number of directories  (i.e. up 4)
@@ -291,16 +298,64 @@ up ()
 	cd $d
 }
 
+# Show you all the colors, to tune the terminal
+function colorgrid( )
+{
+    iter=16
+    while [ $iter -lt 52 ]
+    do
+        second=$[$iter+36]
+        third=$[$second+36]
+        four=$[$third+36]
+        five=$[$four+36]
+        six=$[$five+36]
+        seven=$[$six+36]
+        if [ $seven -gt 250 ];then seven=$[$seven-251]; fi
+
+        echo -en "\033[38;5;$(echo $iter)m█ "
+        printf "%03d" $iter
+        echo -en "   \033[38;5;$(echo $second)m█ "
+        printf "%03d" $second
+        echo -en "   \033[38;5;$(echo $third)m█ "
+        printf "%03d" $third
+        echo -en "   \033[38;5;$(echo $four)m█ "
+        printf "%03d" $four
+        echo -en "   \033[38;5;$(echo $five)m█ "
+        printf "%03d" $five
+        echo -en "   \033[38;5;$(echo $six)m█ "
+        printf "%03d" $six
+        echo -en "   \033[38;5;$(echo $seven)m█ "
+        printf "%03d" $seven
+
+        iter=$[$iter+1]
+        printf '\r\n'
+    done
+}
 
 #######################################################
-# Set the ultimate amazing command prompt
+# Set the best ever command prompt
 #######################################################
 
 alias cpu="grep 'cpu ' /proc/stat | awk '{usage=(\$2+\$4)*100/(\$2+\$4+\$5)} END {print usage}' | awk '{printf(\"%.1f\n\", \$1)}'"
 function __setprompt
 {
-	local LAST_COMMAND=$? # Must come first!
+	# Setting up colors for each section
+	local COL_DATE="\033[0;38;5;22m"
+	local COL_TIME="\033[0;38;5;46m"
+	local COL_CPU="\033[0;38;5;39m"
+	local COL_JOBS="\033[0;38;5;105m"
+	local COL_NETW="\033[0;38;5;117m"
+	local COL_USER="\033[0;38;5;93m"
+	local COL_CWD="\033[0;38;5;214m"
+	local COL_SFIL="\033[0;38;5;124m"
+	local COL_NFIL="\033[0;38;5;196m"
+	local COL_VENV="\033[0;38;5;245m"
+	local COL_RAM="\033[0;38;5;45m"
 
+
+
+	local LAST_COMMAND=$? # Must come first!
+	
 	# Define colors
 	local LIGHTGRAY="\033[0;37m"
 	local WHITE="\033[1;37m"
@@ -363,37 +418,45 @@ function __setprompt
 	fi
 
 	# Date
-	PS1+="\[${DARKGRAY}\](\[${CYAN}\]\$(date +%a) $(date +%b-'%-m')" # Date
-	PS1+="${LIGHTGRAY} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
+	PS1+="\[${DARKGRAY}\](\[${COL_DATE}\]\$(LANG=en_us_88591; date +%a) $(LANG=en_us_88591; date +%b-'%-m')" # Date
+	PS1+="${COL_TIME} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
 
 	# CPU
-	PS1+="(\[${MAGENTA}\]CPU $(cpu)%"
+	PS1+="(\[${COL_CPU}\]CPU $(cpu)%"
+
+	# RAM
+	local ram_cons=$(free -m | awk 'NR==2{printf "RAM %.0f/%.0fGB", $3/1000,$2/1000}')
+	PS1+="\[${DARKGRAY}\]:\[${COL_RAM}\]\$(echo $ram_cons)"
 
 	# Jobs
-	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]\j"
+	# PS1+="\[${DARKGRAY}\]:\[${COL_JOBS}\]\jj"
 
 	# Network Connections (for a server - comment out for non-server)
-	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]Net $(awk 'END {print NR}' /proc/net/tcp)"
+	#PS1+="\[${DARKGRAY}\]:\[${COL_NETW}\]Net $(awk 'END {print NR}' /proc/net/tcp)"
 
 	PS1+="\[${DARKGRAY}\])-"
+
+	# Total size of files in current directory
+	PS1+="(\[${COL_SFIL}\]$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')B\[${DARKGRAY}\]:"
+
+	# Number of files
+	PS1+="\[${COL_NFIL}\]\$(/bin/ls -A -1 | /usr/bin/wc -l)f\[${DARKGRAY}\])-"
 
 	# User and server
 	local SSH_IP=`echo $SSH_CLIENT | awk '{ print $1 }'`
 	local SSH2_IP=`echo $SSH2_CLIENT | awk '{ print $1 }'`
 	if [ $SSH2_IP ] || [ $SSH_IP ] ; then
-		PS1+="(\[${RED}\]\u@\h"
+		PS1+="(\[${COL_USER}\]\u@\h"
 	else
 		PS1+="(\[${RED}\]\u"
 	fi
 
 	# Current directory
-	PS1+="\[${DARKGRAY}\]:\[${BROWN}\]\w\[${DARKGRAY}\])-"
+	PS1+="\[${DARKGRAY}\]:\[${COL_CWD}\]\w\[${DARKGRAY}\])"
 
-	# Total size of files in current directory
-	PS1+="(\[${GREEN}\]$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')\[${DARKGRAY}\]:"
+	# Virtualenv for python
+	[[ ! -z "$VIRTUAL_ENV" ]] && PS1+="\[${DARKGRAY}\]-(\[${COL_VENV}\]${VIRTUAL_ENV##*/}\[${DARKGRAY}\])"
 
-	# Number of files
-	PS1+="\[${GREEN}\]\$(/bin/ls -A -1 | /usr/bin/wc -l)\[${DARKGRAY}\])"
 
 	# Skip to the next line
 	PS1+="\n"
