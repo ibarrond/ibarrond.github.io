@@ -1,0 +1,30 @@
+jupyter contrib nbextension install --system
+
+# One-click pretty code
+jupyter nbextension enable code_prettify/code_prettify
+# Alt-C toggles code comment
+jupyter nbextension enable comment-uncomment/main
+# Show esecution time on code cells
+jupyter nbextension enable execute_time/ExecuteTime
+# hide code, useful to build app-like notebooks
+jupyter nbextension enable hide_input_all/main
+# Define initialization cells, run automatically at startup
+jupyter nbextension enable init_cell/main
+# Add jupytext
+jupyter nbextension enable jupytext/index
+# 80 chars per line of code!
+jupyter nbextension enable ruler/main
+# Try code in a quick-and-dirty way witn Ctrl-B
+jupyter nbextension enable scratchpad/main
+# Spellchecking, no more typos
+jupyter nbextension enable spellchecker/main
+# Two-column cells
+jupyter nbextension enable splitcell/splitcell
+# Automatic Table of contents
+jupyter nbextension enable toc2/main
+# Those beautiful pandas tables
+jupyter nbextension enable table_beautifier/main
+# List of variables
+jupyter nbextension enable varInspector/main
+# Remove navbar, useful with hide input for app-like notebooks
+jupyter nbextension enable zenmode/main
