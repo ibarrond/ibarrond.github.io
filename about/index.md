@@ -8,9 +8,8 @@ class: page-template
 subclass: 'post page'
 ---
 
-Hi! My name is **Alberto Ibarrondo**, the owner of "__Be A Voice, not an Echo__". This is a professional blog to share knowledge related to Data Science, Machine/Deep Learning, Cryptography and Software Development. Since it is a rather small project, most of the ideas an opinions might be a bit biased, but they are all grounded on experience and there will always be external sources available to verify it.
+Hi! My name is **Alberto Ibarrondo**, a first-year CIFRE (industrial) PhD student in the Digital Security department at [EURECOM](http://www.eurecom.fr/en) and the crypto team of [IDEMIA](https://www.idemia.com/), under the supervision of [Melek Önen](http://www.eurecom.fr/~onen/index.html) (EURECOM) and [Hervé Chabanne](https://www.linkedin.com/in/herv%C3%A9-chabanne-2627727/?originalSubdomain=fr) (IDEMIA). 
 
-> If you'd like to contribute and share ideas beyond making a few comments, feel free to [contact me](mailto:ibarrond@eurecom.fr).
+My current research lies in the field of Secure Multiparty Computation. More concretely, I am focused on protecting advanced Biometric Identification methods based on modern Convolutional Neural Networks (such as face recognition).
 
-[If you're an engineer yourself but you feel discouraged to share your knowledge, please reconsider](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045)! It is a wonderful summarizing exercise that will teach you greatly. There are many good alternatives to having a small blog like this one (LinkedIn posts, Medium, Hackernoon or DZone to name a few). Nevertheless, if you like the style and wish to reproduce it yourself, have a look at the [source code](https://github.com/ibarrond/ibarrond.github.io) or check out the [original jasper2 template](https://github.com/jekyller/jasper2).
 
