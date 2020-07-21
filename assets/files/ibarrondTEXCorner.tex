@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%-----------------------------------------------------------------%%%
+%%%---------------------- IBARROND'S CORNER ------------------------%%%
+%%%-----------------------------------------------------------------%%%
+%%%                All the cool & portable LaTeX tricks             %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Place right before \begin{document}
+
+\pdfminorversion=7             % solve WARNING: PDF versions
+\pdfsuppresswarningpagegroup=1 % solve WARNING: multiple pdfs page group
+
+\usepackage{tikz}                  % display a tick with \checkmark
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\usepackage{float}								 % figure/table position H
+\usepackage{multirow}							 % merge rows in tables
+\usepackage{url}									 % urls
+\usepackage[utf8]{inputenc}				 % For accents in words and such
+\usepackage[rightcaption]{sidecap}
+\usepackage{booktabs} 						 % For prettier tables
+\usepackage[margin= 1in]{geometry} % Document margins
+\usepackage{fancyref}							 % Fancy references, \Fref & \fref
+\usepackage{fancyhdr} % Headers and Footers (page numbers!)
+\headheight=13.6pt
+\pagestyle{fancy}     % Cool headers and foots
+				% Remember to add \thispagestyle{empty}	on 1st page
+
+\usepackage[nottoc, notlof, notlot]{tocbibind}% Include Bibliography in ref table
+
+
+\newbox\tempbox										 % Nomenclature environment
+\newenvironment{nomenclature}{%
+   \newcommand\entry[2]{%
+       \setbox\tempbox\hbox{##1.\quad}
+       \hangindent\wd\tempbox\noindent{##1}\quad\ignorespaces##2\par}
+       \subsubsection*{Nomenclature}}{\par\addvspace{12pt}}
+
+% Notes, Missing references and TODOs																	
+\newcommand{\note}[1]{\color{red}(#1!)\color{black}}
+\newcommand{\missref}{\note{[REF]}}
+\newcommand{\todo}[1]{\textcolor{blue}{[Todo: #1]}}
+
+% Circled numbers, command \circled{1}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+						
+						
+% Fancy Captions
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf,it},textfont=it}
+%\captionsetup[subfigure]{labelfont=bf,textfont=normalfont,singlelinecheck=off,justification=raggedright}
+ 
+% New Math operator
+\newcommand{\encr}[1]{\left \langle {#1} \right \rangle_{\mathbf{pub}}} 
+
+% Paragraph spaces and indentation
+% \setlength{\parindent}{0em}
+%\setlength{\parskip}{2pt}
+
+\usepackage{wrapfig}
+% \begin{wrapfigure}[lineheight]{position}[overhang]{width}
+% Positions
+% r 	R 	right side of the text
+% l 	L 	left side of the text
+% i 	I 	inside edge near the binding (in a twoside document)
+% o 	O 	outside edge far from the binding
+
+% CODE SNIPPETS
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Python,                 % the language of the code
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%------------------- END OF IBARROND'S CORNER --------------------%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

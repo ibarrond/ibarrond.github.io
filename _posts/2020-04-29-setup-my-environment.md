@@ -29,7 +29,7 @@ pip install -r https://ibarrond.github.io/assets/files/requirements.txt
 These are the included packages: 
 
 ```python
-# Generic Math
+ Generic Math
 numba    # Efficient NumPy JIT compiler
 numpy    # Basic - Array computing
 scipy    # More maths/engineering/scientific computing
@@ -68,6 +68,9 @@ scikit-learn         # Basic - Machine Learning
 #   -> Requires a C++ compiler: sudo apt-get install build-essential
 pystan;    platform_system!='Windows'
 fbprophet; platform_system!='Windows'
+
+# Utilities
+pylint     # Better coding inside VSCode
 ```
 
 Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/assets/files/requirements.txt) and install it via `pip install -r requirements.txt` .
@@ -122,7 +125,7 @@ wget -O ~/.bashrc https://ibarrond.github.io/assets/files/bashrc.txt
 Download the installer from [here](https://code.visualstudio.com/docs/setup/setup-overview), install and run the following to install the extensions:
 
 ```bash
-curl -s https://ibarrond.github.io/assets/files/VS_Code_extensions.txt > VS_Code_extensions.ps1
+wget -O VS_Code_extensions.ps1 https://ibarrond.github.io/assets/files/VS_Code_extensions.txt
 . VS_Code_extensions.ps1
 ```
 
@@ -149,3 +152,10 @@ code --install-extension VisualStudioExptTeam.vscodeintellicode --force
 
 # 4. LaTEX
 There are multiple ways to get a working LaTEX distribution. My preferred is TEXLive, which downloads locally a very fat installer (4GB) and installs all the packages you need. Just go [here](https://www.tug.org/texlive/acquire-iso.html), download the big `.iso` file, mount it and install locally (it takes more than 1h to install). The LaTEX extension in VSCode should recognize it.
+
+Additionally, I have a compilation of libraries and useful stuff in [here](https://ibarrond.github.io/assets/files/ibarrondTEXCorner.tex), which can be obtained by running:
+
+```bash
+wget -O ibarrondTEXCorner.tex https://ibarrond.github.io/assets/files/ibarrondTEXCorner.tex
+```
+Just add it at the top of your main latex document with `\include{ibarrondTEXCorner.tex}`.
