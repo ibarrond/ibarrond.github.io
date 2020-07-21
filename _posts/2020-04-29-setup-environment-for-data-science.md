@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  assets/images/post-setup-env.jpg
 navigation: True
-title: Setting up my environment for Data Science
+title: Setting up my environment
 date: 2020-04-29 10:00:00
 tags: [dev]
 class: post-template
@@ -13,10 +13,14 @@ author: ibarrond
 
 
 
-Let's set up a Data Science dev environment from scratch! This quick guide will cover `Python` (and packages, including Jupyter Notebooks) and `bash`.
+Let's set up a development environment from scratch! This guide will cover __Python__ (and packages, and Jupyter Notebooks), __C++__, __bash__ and __VSCode__ (lincluding _LaTEX_).
+
+First things first: I code in _Python_ for most things not requiring performance (including almost all Data Science), and _C++_ or _Cython_ (a Python library with extensions in Jupyter Notebooks) for performance critical applications. I've gotten used to do most of my work on __VSCode__, but I still like using __Jupyter Notebooks__ for quick prototyping and visualization. Additionally, I write documents using LaTEX, the de-facto standard for scientific publications, integrated directly in VSCode. This setup is convenient both for Data Science and Cryptography.
+
+
 
 # 1. Python
-Python ([download](https://www.python.org/downloads/)) is the language to go for most Data Science projects, due to the large amount of useful packages available. In order to install the Python Packages required for a Data Science build, one could use the generic Anaconda, or if you're like me and you hate downloading a lot of useless stuff and controlling your environment and installed packages, you can use a curated list of packages by running the following command
+Python ([download](https://www.python.org/downloads/)) is the language to go for most Data Science projects, due to the large amount of useful packages available. In order to install the Python Packages required for a Data Science build, one could use the generic Anaconda, or if you're like me and you hate downloading a lot of useless stuff and keeping a 'minimalistic' list installed packages, you can use a curated list of packages by running the following command
 
 ```bash
 pip install -r https://ibarrond.github.io/assets/files/requirements.txt
@@ -68,7 +72,12 @@ fbprophet; platform_system!='Windows'
 
 Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/assets/files/requirements.txt) and install it via `pip install -r requirements.txt` .
 ## 1.1 Jupyter notebook extensions
-The `jupyter_contrib_nbextensions` package requires some local setup (installing JS files and activating extensions). For this, run (copy-paste in a console and execute):
+The `jupyter_contrib_nbextensions` package requires some local setup (installing JS files and activating extensions). For this, run (copy-paste in an elevated console and execute):
+
+```bash
+wget -O jupyter_extensions.ps1 https://ibarrond.github.io/assets/files/jupyter_extensions.txt
+. jupyter_extensions.ps1
+```
 
 ```bash
 jupyter contrib nbextension install --system
@@ -103,8 +112,40 @@ jupyter nbextension enable varInspector/main
 jupyter nbextension enable zenmode/main
 ```
 # 2. Bash
-Flavouring my preferred terminal, Bash, is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/assets/files/.bashrc) and run it:
+Flavouring my preferred terminal, Bash (in Linux and WSL), is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/assets/files/.bashrc) and run it:
 ```bash
-curl -s https://ibarrond.github.io/assets/files/bashrc.txt > ~/.bashrc
-source ~/.bashrc
+wget -O ~/.bashrc https://ibarrond.github.io/assets/files/bashrc.txt
+. ~/.bashrc
 ```
+
+# 3. VS Code
+Download the installer from [here](https://code.visualstudio.com/docs/setup/setup-overview), install and run the following to install the extensions:
+
+```bash
+curl -s https://ibarrond.github.io/assets/files/VS_Code_extensions.txt > VS_Code_extensions.ps1
+. VS_Code_extensions.ps1
+```
+
+This will execute the following code:
+
+```bash
+code --install-extension anseki.vscode-color --force
+code --install-extension CoenraadS.bracket-pair-colorizer --force
+code --install-extension eamodio.gitlens --force
+code --install-extension esbenp.prettier-vscode --force
+code --install-extension ginfuru.ginfuru-vscode-jekyll-syntax --force
+code --install-extension James-Yu.latex-workshop --force
+code --install-extension moshfeu.compare-folders --force
+code --install-extension ms-python.python --force
+code --install-extension ms-vscode-remote.remote-containers --force
+code --install-extension ms-vscode-remote.remote-ssh --force
+code --install-extension ms-vscode-remote.remote-ssh-edit --force
+code --install-extension ms-vscode-remote.remote-wsl --force
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack --force
+code --install-extension ms-vscode.cpptools --force
+code --install-extension tcwalther.cython --force
+code --install-extension VisualStudioExptTeam.vscodeintellicode --force
+```
+
+# 4. LaTEX
+There are multiple ways to get a working LaTEX distribution. My preferred is TEXLive, which downloads locally a very fat installer (4GB) and installs all the packages you need. Just go [here](https://www.tug.org/texlive/acquire-iso.html), download the big `.iso` file, mount it and install locally (it takes more than 1h to install). The LaTEX extension in VSCode should recognize it.

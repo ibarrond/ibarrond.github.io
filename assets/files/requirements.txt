@@ -37,3 +37,6 @@ scikit-learn         # Basic - Machine Learning
 #   -> Requires a C++ compiler: sudo apt-get install build-essential
 pystan;    platform_system!='Windows'
 fbprophet; platform_system!='Windows'
+
+# Utilities
+pylint     # Better coding inside VSCode
