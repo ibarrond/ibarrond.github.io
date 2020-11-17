@@ -29,7 +29,7 @@ pip install -r https://ibarrond.github.io/assets/files/requirements.txt
 These are the included packages: 
 
 ```python
- Generic Math
+# Generic Math
 numba    # Efficient NumPy JIT compiler
 numpy    # Basic - Array computing
 scipy    # More maths/engineering/scientific computing
@@ -71,9 +71,15 @@ fbprophet; platform_system!='Windows'
 
 # Utilities
 pylint     # Better coding inside VSCode
+
+# Python documentation
+sphinx                  # Standard documentation generator, reads docstrings!
+sphinx-gallery          # Gallery of examples
+memory-profiler         # Memory usage when running examples
+sphinxcontrib-fulltoc   # Full TOC in sidebar
 ```
 
-Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/assets/files/requirements.txt) and install it via `pip install -r requirements.txt` .
+Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/assets/files/requirements.txt) and install it via `pip install -r requirements.txt`.
 ## 1.1 Jupyter notebook extensions
 The `jupyter_contrib_nbextensions` package requires some local setup (installing JS files and activating extensions). For this, run (copy-paste in an elevated console and execute):
 
@@ -81,6 +87,8 @@ The `jupyter_contrib_nbextensions` package requires some local setup (installing
 wget -O jupyter_extensions.ps1 https://ibarrond.github.io/assets/files/jupyter_extensions.txt
 . jupyter_extensions.ps1
 ```
+
+This will install the following extensions:
 
 ```bash
 jupyter contrib nbextension install --system
@@ -114,6 +122,30 @@ jupyter nbextension enable varInspector/main
 # Remove navbar, useful with hide input for app-like notebooks
 jupyter nbextension enable zenmode/main
 ```
+
+# 1.2 Jupyter Notebook header
+To add a bit of style to the header of a notebook, I always include this title (in a markdown cell) and a text abstract (also found [here](https://ibarrond.github.io/assets/files/title.html)):
+```html
+  <div style="font-variant: small-caps; font-weight: normal; font-size: 30px;  
+              padding: 15px;            text-align: center;  margin: 10px;">
+  This is a cool title
+  </div> 
+
+  <div style="font-variant: small-caps; font-weight: normal; font-size: 20px; 
+              text-align: center;       padding: 15px;">
+  and this is a subtitle
+  </div> 
+
+  <div style=" float:right;  font-size: 12px; line-height: 12px; padding: 10px 15px 8px;">
+  Alberto IBARRONDO (Author)
+  </div> 
+
+  <div style=" display: inline-block; font-family: 'Lato', sans-serif; font-size: 12px;
+      font-weight: bold; line-height: 12px; letter-spacing: 1px; padding: 10px 15px 8px;">
+  09/10/2018 (date)
+  </div>
+```
+
 # 2. Bash
 Flavouring my preferred terminal, Bash (in Linux and WSL), is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/assets/files/.bashrc) and run it:
 ```bash

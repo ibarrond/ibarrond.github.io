@@ -40,3 +40,9 @@ fbprophet; platform_system!='Windows'
 
 # Utilities
 pylint     # Better coding inside VSCode
+
+# Python documentation
+sphinx			# Standard documentation generator, reads docstrings!
+sphinx-gallery		# Gallery of examples
+memory-profiler		# Memory usage when running examples
+sphinxcontrib-fulltoc	# Full TOC in sidebar
