@@ -1,4 +1,4 @@
-## This .bashrc file is a mix of several sources, aggregated by Alberto Ibarrondo @ibarrond:
+## This .bashrc file is a mix of several sources, aggregated by @ibarrond:
 # - https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
 # - https://unix.stackexchange.com/questions/148/colorizing-your-terminal-and-shell-environment
 # - https://www.freecodecamp.org/news/how-to-do-twice-as-much-with-half-the-keystrokes-using-bashrc/
@@ -12,12 +12,6 @@ esac
 
 # test for interactive shell, extracting from $-, the shell options
 iatest=$(expr index "$-" i)
-
-#######################################################
-# VITAL COMMODITIES
-#######################################################
-# Swap capslock and esc
-setxkbmap -option caps:swapescape
 
 
 #######################################################
@@ -44,7 +38,7 @@ if [[ $iatest > 0 ]]; then bind "set bell-style visible"; fi
 
 # Expand the history size
 export HISTFILESIZE=10000
-export HISTSIZE=2000
+export HISTSIZE=5000
 
 # Don't put duplicate lines in the history and do not add lines that start with a space
 export HISTCONTROL=erasedups:ignoredups:ignorespace
@@ -108,11 +102,22 @@ alias ls='ls -AFhC --group-directories-first --color=auto'
 alias mkdir='mkdir -pv'
 # Always try to (c)ontinue getting a partially-downloaded file
 alias wget='wget -c'
+# Attach or create, use terminal colours in tmux
+alias tmux='tmux -2'
+
+# TMUX
+tma() { tmux attach -t "$1" || tmux new-session -s "$1"; }
+alias tmk='tmux kill-session -t '
+alias tml='tmux ls'
+
+# WORL IN PROGRESS DIRECTORY
+wdset() { export WIP_DIR="$(pwd)";}
+alias wd='cd $WIP_DIR'
 
 # PYTHON
 # Virtualenv
-alias mkenv='python3 -m venv venv'
-alias startenv='source venv/bin/activate && which python3'
+function mkenv { python3 -m venv "$1:-venv"; }
+function startenv { source ${1:-venv}/bin/activate && which python3; }
 alias stopenv='deactivate'
 
 # GIT
@@ -269,9 +274,9 @@ cpg ()
 mvg ()
 {
 	if [ -d "$2" ];then
-		mv "$1" "$2" && cd "$2"
+		mv $1 $2 && cd $2
 	else
-		mv "$1" "$2"
+		mv $1 $2
 	fi
 }
 
@@ -331,6 +336,7 @@ function colorgrid( )
         printf '\r\n'
     done
 }
+
 
 #######################################################
 # Set the best ever command prompt

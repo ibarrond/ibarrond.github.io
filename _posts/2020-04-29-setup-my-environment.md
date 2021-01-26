@@ -29,7 +29,7 @@ pip install -r https://ibarrond.github.io/assets/files/requirements.txt
 These are the included packages: 
 
 ```python
- Generic Math
+# Generic Math
 numba    # Efficient NumPy JIT compiler
 numpy    # Basic - Array computing
 scipy    # More maths/engineering/scientific computing
@@ -71,6 +71,12 @@ fbprophet; platform_system!='Windows'
 
 # Utilities
 pylint     # Better coding inside VSCode
+
+# Python documentation
+sphinx                  # Standard documentation generator, reads docstrings!
+sphinx-gallery          # Gallery of examples
+memory-profiler         # Memory usage when running examples
+sphinxcontrib-fulltoc   # Full TOC in sidebar
 ```
 
 Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/assets/files/requirements.txt) and install it via `pip install -r requirements.txt`.
