@@ -48,9 +48,9 @@ This will install the following extensions:
 ```
 
 # 1.2 Jupyter Notebook header
-To add a bit of style to the header of a notebook, I always include this title (in a markdown cell) and a text abstract (also found [here](https://ibarrond.github.io/files/title.html)):
+To add a bit of style to the header of a notebook, I always include this title (in a markdown cell) and a text abstract (also found [here](https://ibarrond.github.io/files/jupyter_title.html)):
 ```html
-{% include_relative files/title.html %}
+{% include_relative files/jupyter_title.html %}
 ```
 
 # 2. Bash
