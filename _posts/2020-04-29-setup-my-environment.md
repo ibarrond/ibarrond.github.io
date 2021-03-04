@@ -23,40 +23,40 @@ First things first: I code in _Python_ for most things not requiring performance
 Python ([download](https://www.python.org/downloads/)) is the language to go for most Data Science projects, due to the large amount of useful packages available. In order to install the Python Packages required for a Data Science build, one could use the generic Anaconda, or if you're like me and you hate downloading a lot of useless stuff and keeping a 'minimalistic' list installed packages, you can use a curated list of packages by running the following command
 
 ```bash
-pip install -r https://ibarrond.github.io/_includes/files/requirements.txt
+pip install -r https://ibarrond.github.io/files/requirements.txt
 ```
 
 These are the included packages: 
 
 ```python
-{% include files/requirements.txt %}
+{% include_relative files/requirements.txt %}
 ```
 
-Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/_includes/files/requirements.txt) and install it via `pip install -r requirements.txt`.
+Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/files/requirements.txt) and install it via `pip install -r requirements.txt`.
 ## 1.1 Jupyter notebook extensions
 The `jupyter_contrib_nbextensions` package requires some local setup (installing JS files and activating extensions). For this, run (copy-paste in an elevated console and execute):
 
 ```bash
-wget -O jupyter_extensions.ps1 https://ibarrond.github.io/_includes/files/jupyter_extensions.txt
+wget -O jupyter_extensions.ps1 https://ibarrond.github.io/files/jupyter_extensions.txt
 . jupyter_extensions.ps1
 ```
 
 This will install the following extensions:
 
 ```bash
-{% include files/jupyter_extensions.txt %}
+{% include_relative files/jupyter_extensions.txt %}
 ```
 
 # 1.2 Jupyter Notebook header
-To add a bit of style to the header of a notebook, I always include this title (in a markdown cell) and a text abstract (also found [here](https://ibarrond.github.io/_includes/files/title.html)):
+To add a bit of style to the header of a notebook, I always include this title (in a markdown cell) and a text abstract (also found [here](https://ibarrond.github.io/files/title.html)):
 ```html
-{% include files/title.html %}
+{% include_relative files/title.html %}
 ```
 
 # 2. Bash
-Flavouring my preferred terminal, Bash (in Linux and WSL), is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/_includes/files/.bashrc) and run it:
+Flavouring my preferred terminal, Bash (in Linux and WSL), is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/files/.bashrc) and run it:
 ```bash
-wget -O ~/.bashrc https://ibarrond.github.io/_includes/files/bashrc.txt
+wget -O ~/.bashrc https://ibarrond.github.io/files/bashrc.txt
 . ~/.bashrc
 ```
 
@@ -64,23 +64,23 @@ wget -O ~/.bashrc https://ibarrond.github.io/_includes/files/bashrc.txt
 Download the installer from [here](https://code.visualstudio.com/docs/setup/setup-overview), install and run the following to install the extensions:
 
 ```bash
-wget -O VS_Code_extensions.ps1 https://ibarrond.github.io/_includes/files/VS_Code_extensions.txt
+wget -O VS_Code_extensions.ps1 https://ibarrond.github.io/files/VS_Code_extensions.txt
 . VS_Code_extensions.ps1
 ```
 
 This will execute the following code:
 
 ```bash
-{% include files/VS_Code_extensions.txt %}
+{% include_relative files/VS_Code_extensions.txt %}
 ```
 
 # 4. LaTEX
 There are multiple ways to get a working LaTEX distribution. My preferred is TEXLive, which downloads locally a very fat installer (4GB) and installs all the packages you need. Just go [here](https://www.tug.org/texlive/acquire-iso.html), download the big `.iso` file, mount it and install locally (it takes more than 1h to install). The LaTEX extension in VSCode should recognize it.
 
-Additionally, I have a compilation of libraries and useful stuff in [here](https://ibarrond.github.io/_includes/files/ibarrondTEXCorner.tex), which can be obtained by running:
+Additionally, I have a compilation of libraries and useful stuff in [here](https://ibarrond.github.io/files/ibarrondTEXCorner.tex), which can be obtained by running:
 
 ```bash
-wget -O ibarrondTEXCorner.tex https://ibarrond.github.io/_includes/files/ibarrondTEXCorner.tex
+wget -O ibarrondTEXCorner.tex https://ibarrond.github.io/files/ibarrondTEXCorner.tex
 ```
 Just add it at the top of your main latex document with `\include{ibarrondTEXCorner.tex}`.
 
