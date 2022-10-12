@@ -1,3 +1,12 @@
+# Machine & Deep Learning
+tensorflow           # Basic - Deep Learning from google
+tensorflow_hub       # Collection of tf models
+tensorflow_datasets  # Collection of tf datasets
+scikit-learn         # Basic - Machine Learning
+Keras		     # Deep Learning from FB
+torch		     # Deep Learning from FB
+fastai		     # Deep Learning from the very best
+
 # Generic Math
 numba    # Efficient NumPy JIT compiler
 numpy    # Basic - Array computing
@@ -22,20 +31,25 @@ datashader # Render huge datasets
 matplotlib_venn # Plotting Venn diagrams
 seaborn    # Improving Matplotlib
 bokeh      # Interactive data visualization
+plotly     # Interactive data visualization
 
 # Web App and REST
 requests   # Basic - interact with any REST API
 flask      # Web dev, lightweight compared to django
-
-# Machine & Deep Learning
-tensorflow           # Basic - Deep Learning from google
-tensorflow_hub       # Collection of tf models
-tensorflow_datasets  # Collection of tf datasets
-scikit-learn         # Basic - Machine Learning
 
 # Time Series (Only in Linux)
 #   -> Requires a C++ compiler: sudo apt-get install build-essential
 pystan;    platform_system!='Windows'
 fbprophet; platform_system!='Windows'
 
+# Utilities
+pylint     # Better coding inside VSCode
 
+# Python documentation
+sphinx			# Standard documentation generator, reads docstrings!
+sphinx-gallery		# Gallery of examples
+memory-profiler		# Memory usage when running examples
+sphinxcontrib-fulltoc	# Full TOC in sidebar
+
+# personal packages
+Pyfhel
