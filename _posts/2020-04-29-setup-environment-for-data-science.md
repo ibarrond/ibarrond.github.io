@@ -71,7 +71,49 @@ fbprophet; platform_system!='Windows'
 ```
 
 Alternatively, you can just download the [requirements.txt file](https://ibarrond.github.io/assets/files/requirements.txt) and install it via `pip install -r requirements.txt` .
-## 1.1 Jupyter notebook extensions
+
+# 2. Bash
+Flavouring my preferred terminal, Bash (in Linux and WSL), is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/assets/files/.bashrc) and run it:
+```bash
+wget -O ~/.bashrc https://ibarrond.github.io/assets/files/bashrc.txt
+. ~/.bashrc
+```
+
+# 3. VS Code
+Download the installer from [here](https://code.visualstudio.com/docs/setup/setup-overview), install and run the following to install the extensions:
+
+```bash
+curl -s https://ibarrond.github.io/assets/files/VS_Code_extensions.txt > VS_Code_extensions.ps1
+. VS_Code_extensions.ps1
+```
+
+This will execute the following code:
+
+```bash
+code --install-extension anseki.vscode-color --force
+code --install-extension CoenraadS.bracket-pair-colorizer --force
+code --install-extension eamodio.gitlens --force
+code --install-extension esbenp.prettier-vscode --force
+code --install-extension ginfuru.ginfuru-vscode-jekyll-syntax --force
+code --install-extension James-Yu.latex-workshop --force
+code --install-extension moshfeu.compare-folders --force
+code --install-extension ms-python.python --force
+code --install-extension ms-vscode-remote.remote-containers --force
+code --install-extension ms-vscode-remote.remote-ssh --force
+code --install-extension ms-vscode-remote.remote-ssh-edit --force
+code --install-extension ms-vscode-remote.remote-wsl --force
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack --force
+code --install-extension ms-vscode.cpptools --force
+code --install-extension tcwalther.cython --force
+code --install-extension VisualStudioExptTeam.vscodeintellicode --force
+```
+
+# 4. LaTEX
+There are multiple ways to get a working LaTEX distribution. My preferred is TEXLive, which downloads locally a very fat installer (4GB) and installs all the packages you need. Just go [here](https://www.tug.org/texlive/acquire-iso.html), download the big `.iso` file, mount it and install locally (it takes more than 1h to install). The LaTEX extension in VSCode should recognize it.
+
+# 5. Jupyter Notebooks
+
+## 5.1 Extensions
 The `jupyter_contrib_nbextensions` package requires some local setup (installing JS files and activating extensions). For this, run (copy-paste in an elevated console and execute):
 
 ```bash
@@ -111,41 +153,17 @@ jupyter nbextension enable varInspector/main
 # Remove navbar, useful with hide input for app-like notebooks
 jupyter nbextension enable zenmode/main
 ```
-# 2. Bash
-Flavouring my preferred terminal, Bash (in Linux and WSL), is achieved using a `.bashrc` file. To use it, just download my [bashrc file](https://ibarrond.github.io/assets/files/.bashrc) and run it:
-```bash
-wget -O ~/.bashrc https://ibarrond.github.io/assets/files/bashrc.txt
-. ~/.bashrc
+
+## 5.2 Fancy header
 ```
 
-# 3. VS Code
-Download the installer from [here](https://code.visualstudio.com/docs/setup/setup-overview), install and run the following to install the extensions:
-
-```bash
-curl -s https://ibarrond.github.io/assets/files/VS_Code_extensions.txt > VS_Code_extensions.ps1
-. VS_Code_extensions.ps1
+```html
+<div class="h1 text-center text-capitalize font-weight-bold">A Nice Title</div> 
+<div class="h3 text-center text-muted font-weight-light">With its nice subtitle</div> 
+<div class="flex-container">
+  <div class="row">
+    <em class="col-md-6 font-italic">Alberto IBARRONDO</em> 
+    <em class="col-md-6 text-right">10/11/2021</em>
+  </div>
+</div>
 ```
-
-This will execute the following code:
-
-```bash
-code --install-extension anseki.vscode-color --force
-code --install-extension CoenraadS.bracket-pair-colorizer --force
-code --install-extension eamodio.gitlens --force
-code --install-extension esbenp.prettier-vscode --force
-code --install-extension ginfuru.ginfuru-vscode-jekyll-syntax --force
-code --install-extension James-Yu.latex-workshop --force
-code --install-extension moshfeu.compare-folders --force
-code --install-extension ms-python.python --force
-code --install-extension ms-vscode-remote.remote-containers --force
-code --install-extension ms-vscode-remote.remote-ssh --force
-code --install-extension ms-vscode-remote.remote-ssh-edit --force
-code --install-extension ms-vscode-remote.remote-wsl --force
-code --install-extension ms-vscode-remote.vscode-remote-extensionpack --force
-code --install-extension ms-vscode.cpptools --force
-code --install-extension tcwalther.cython --force
-code --install-extension VisualStudioExptTeam.vscodeintellicode --force
-```
-
-# 4. LaTEX
-There are multiple ways to get a working LaTEX distribution. My preferred is TEXLive, which downloads locally a very fat installer (4GB) and installs all the packages you need. Just go [here](https://www.tug.org/texlive/acquire-iso.html), download the big `.iso` file, mount it and install locally (it takes more than 1h to install). The LaTEX extension in VSCode should recognize it.
